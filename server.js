@@ -8,12 +8,13 @@ app.use(morgan('combined'));
 
 
 var articles={
-var  article-one:{
-    title: 'article-one/bijay kumar jha',
-    heading: 'article-one',
-    date: 'Aug -29-2017',
-    content:`
-               <p>
+    "article-one":{
+        title:'article-one/bijay kumar jha',
+        heading:'article-one',
+        date:'Aug-29-2017',
+        content:
+        `
+        <p>
                  This is my first content of article one guys
              </p>
              <p>
@@ -24,44 +25,38 @@ var  article-one:{
              </p>
              <p>
                  This is my first content of article one guys
-             </p>`},
-var article-two:{
-     title:'article-two/bijay kumar jha',
-    heading:'article-two',
-    date:'Aug -30-2017',
-    content:`
-               <p>
+             </p>
+        `
+    },
+    "article-two":{
+        title:'article-one/bijay kumar jha',
+        heading:'article-one',
+        date:'Aug-30-2017',
+        content:
+        `
+        <p>
                  This is my first content of article one guys
              </p>
              <p>
                  This is my first content of article one guys
-             </p>
-             <p>
+             
+        `
+    },
+    "article-three":{
+        title:'article-three/bijay kumar jha',
+        heading:'article-three',
+        date:'Aug-31-2017',
+        content:
+        `
+        <p>
                  This is my first content of article one guys
              </p>
-             <p>
-                 This is my first content of article one guys
-             </p>`
+            
+        `
+    }
     
-},
-var article-three: { title:'article-three/bijay kumar jha',
-    heading:'article-three',
-    date:'Aug -79-2017',
-    content:`
-               <p>
-                 This is my first content of article one guys
-             </p>
-             <p>
-                 This is my first content of article one guys
-             </p>
-             <p>
-                 This is my first content of article one guys
-             </p>
-             <p>
-                 This is my first content of article one guys
-             </p>`
-}
- };
+    
+};
     function createTemplate(data){
         var title=data.title;
         var date=data.date;
