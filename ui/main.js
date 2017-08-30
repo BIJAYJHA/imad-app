@@ -17,7 +17,7 @@ button.onclick= function (){
         }
         //not done yet
     }
-   request.open('GET','http://bijaykumarjha0209.imad.hasura-app.io/',true);
+   request.open('GET','http://bijaykumarjha0209.imad.hasura-app.io/counter',true);
    request.send(null);
     
     };
