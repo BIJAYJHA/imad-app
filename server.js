@@ -108,6 +108,9 @@ app.get('/counter',function(req,res){
     res.send(counter.toString());
     
 });
+
+
+var names=[];
 app.get('/submit-name',function(req,res){//url=submit-name?query
    //get the name from the request
    var name=req.query.name;//TODO
@@ -141,7 +144,7 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
-var names=[];
+
 
 
 
