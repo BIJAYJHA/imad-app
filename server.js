@@ -158,8 +158,23 @@ app.get('/submit-name',function(req,res){//url=submit-name?query
 app.get('/articles/:articleName',function(req,res){
     //articleNmae==article-one
     //articles[articleName]=={}content object of article-one
-    var articleName=req.params.articleName;//this is how i extract the articla name 
-    res.send(createTemplate(articles[articleName]));
+//this is how i extract the articla name
+    pool.quer("SELECT * FROM article where title= "+ req.param.articleName,function(err,result){
+        if(err){
+            res.status(500).send(err.toString());
+        }
+        else{
+            if(result.rows.length===0){
+                res.status(404).send('ARticle not found');
+                
+            }
+            else{
+             var articleData=result.rows[0];
+             res.send(createTemplate(articleData));
+            }
+        }
+    });
+
 });
 
 app.get('/ui/style.css', function (req, res) {
