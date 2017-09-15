@@ -155,7 +155,7 @@ app.get('/submit-name',function(req,res){//url=submit-name?query
 
 
 
-app.get('/:articleName',function(req,res){
+app.get('/articles/:articleName',function(req,res){
     //articleNmae==article-one
     //articles[articleName]=={}content object of article-one
     var articleName=req.params.articleName;//this is how i extract the articla name 
