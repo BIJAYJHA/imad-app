@@ -19,7 +19,7 @@ app.use(morgan('combined'));
 
 var articles={
     "article-one":{
-        title:'article-one/bijay kumar jha',
+        title:'article-one',
         heading:'article-one',
         date:'Aug-29-2017',
         content:
