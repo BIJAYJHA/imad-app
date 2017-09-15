@@ -159,13 +159,13 @@ app.get('/articles/:articleName',function(req,res){
     //articleNmae==article-one
     //articles[articleName]=={}content object of article-one
 //this is how i extract the articla name
-    pool.query("SELECT * FROM article where title= ' "+ req.param.articleName + "'",function(err,result){
+    pool.query("SELECT * FROM article where title= ' "+ req.params.articleName + "'",function(err,result){
         if(err){
             res.status(500).send(err.toString());
         }
         else{
             if(result.rows.length===0){
-                res.status(404).send('ARticle not found');
+                res.status(404).send('Article not found');
                 
             }
             else{
